@@ -25,7 +25,7 @@ public class MyCustLambdaFunctionHandler implements RequestHandler<RequestClass,
 			e.printStackTrace();
 			lambdaResponse.setError(e.getMessage());
 		}
-		context.getLogger().log("Response : " + lambdaResponse);
+		context.getLogger().log("Response 1: " + lambdaResponse);
 		return lambdaResponse;
 	}
 
