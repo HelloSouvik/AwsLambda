@@ -9,7 +9,6 @@ pipeline {
             steps {
                 echo 'Building bat set done'
                 echo "PATH = ${PATH}"
-                echo "M2_HOME = ${M2_HOME}"
             }
         }
         stage('Test') {
