@@ -4,6 +4,10 @@ pipeline {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
     }
+    tools { 
+        maven 'Maven 3.5.3' 
+        jdk 'jdk8' 
+    }
     stages {
         stage('Build') {
             steps {
