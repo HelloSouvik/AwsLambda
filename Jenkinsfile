@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building bat set done'
+                echo 'Building bat set done-1'
                 echo "PATH = ${PATH}"
                 bat 'mvn clean install -Dmaven.test.failure.ignore=true' 
             }
