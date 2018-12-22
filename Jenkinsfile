@@ -4,11 +4,23 @@ pipeline {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
     }
+    tools { 
+        maven 'Maven 3.5.3' 
+        jdk 'jdk8' 
+    }
     stages {
         stage('Build') {
             steps {
                 echo 'Building bat set done'
                 echo "PATH = ${PATH}"
+            }
+            steps {
+                sh 'mvn clean install -Dmaven.test.failure.ignore=true' 
+            }
+            post {
+                success {
+                    junit 'target/surefire-reports/**/*.xml' 
+                }
             }
         }
         stage('Test') {
