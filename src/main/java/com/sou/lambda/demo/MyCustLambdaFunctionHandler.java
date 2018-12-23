@@ -16,7 +16,7 @@ public class MyCustLambdaFunctionHandler implements RequestHandler<RequestClass,
 	public ResponseClass handleRequest(RequestClass input, Context context) {
 
 		LambdaLogger logger = context.getLogger();
-		logger.log("Loading Java Lambda handler of ProxyWithStream-2");
+		logger.log("Loading Java Lambda handler of ProxyWithStream-");
 		ResponseClass lambdaResponse = new ResponseClass();
 		try {
 			lambdaResponse.setGreetings("Hello " + input.getFirstName() + " Response Time : " + input.getLastName() + " Response Time : " + new Date());
